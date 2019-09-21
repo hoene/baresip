@@ -7,7 +7,6 @@
 #include <re.h>
 #include <baresip.h>
 #include <string.h>
-#include <lame/lame.h>
 #include "mpa.h"
 
 
@@ -48,7 +47,7 @@ void mpa_decode_fmtp(struct mpa_param *prm, const char *fmtp)
 		else if (!strncmp("joint_stereo",val.p,val.l))
 			prm->mode = JOINT_STEREO;
 		else if (!strncmp("single_channel",val.p,val.l))
-			prm->mode = MONO;
+			prm->mode = SINGLE_CHANNEL;
 		else if (!strncmp("dual_channel",val.p,val.l))
 			prm->mode = DUAL_CHANNEL;
 	}
